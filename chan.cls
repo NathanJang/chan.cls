@@ -16,7 +16,7 @@
 % This work consists of the file chan.cls.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{chan}[2016/01/22 Chanathan's Paper]
+\ProvidesClass{chan}[2016/02/29 Chanathan's Paper]
 
 %% declare option(s)
 
@@ -70,10 +70,9 @@
 \RequirePackage{fix-cm}
 
 %%%% ISO date
-\RequirePackage{datetime}
-\yyyymmdddate{}
-\renewcommand{\dateseparator}{-}
-\renewcommand{\date}[3]{\global\def\@date{#1\dateseparator#2\dateseparator#3}}
+\RequirePackage[english]{isodate}
+\renewcommand{\date}[1]{\global\def\@date{\isodate#1}}
+\date{\today}
 
 %%%% url
 \RequirePackage{url}
