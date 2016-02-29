@@ -71,8 +71,8 @@
 
 %%%% ISO date
 \RequirePackage[english]{isodate}
-\renewcommand{\date}[1]{\global\def\@date{\isodate#1}}
-\date{\today}
+\dateinputformat{LaTeX}
+\renewcommand{\date}[1]{\global\def\@date{\isodate\printdate{#1}}}
 
 %%%% url
 \RequirePackage{url}
