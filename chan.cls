@@ -73,6 +73,7 @@
 \RequirePackage[english]{isodate}
 \dateinputformat{LaTeX}
 \renewcommand{\date}[1]{\global\def\@date{\isodate\printdate{#1}}}
+\global\def\@date{\isodate{\today}}
 
 %%%% url
 \RequirePackage{url}
