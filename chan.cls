@@ -142,6 +142,11 @@
 \setlength{\voffset}{0.3cm}
 \setlength{\headsep}{0.5cm}
 
+%% watermarks
+\RequirePackage{draftwatermark}
+\newcommand\watermark[1]{\SetWatermarkText{#1}}
+\newcommand\watermarkscale[1]{\SetWatermarkScale{#1}}
+\newcommand\draft[1]{\watermark{DRAFT #1}}
 
 %% section headings
 \RequirePackage{titlesec}
