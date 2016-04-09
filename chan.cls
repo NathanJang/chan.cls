@@ -16,7 +16,7 @@
 % This work consists of the file chan.cls.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{chan}[2016/02/29 Chanathan's Paper]
+\ProvidesClass{chan}[2016/04/09 Chanathan's Paper]
 
 %% declare option(s)
 
@@ -158,6 +158,13 @@
 
 \titleformat{\paragraph}{\normalsize\bfseries}{\theparagraph}{.5cm}{}
 \titlespacing{\paragraph}{0pt}{.5cm}{.25cm}
+
+%% table of contents
+\setcounter{tocdepth}{4}
+\newcommand{\usection}[1]{\pagebreak\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\usubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\usubsubsection}[1]{\subsubsection*{#1}\addcontentsline{toc}{subsubsection}{#1}}
+\newcommand{\uparagraph}[1]{\paragraph*{#1}\addcontentsline{toc}{paragraph}{#1}}
 
 %% paragraph styles
 \raggedright{}
