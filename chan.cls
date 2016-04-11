@@ -147,6 +147,7 @@
 \newcommand\watermark[1]{\SetWatermarkText{#1}}
 \newcommand\watermarkscale[1]{\SetWatermarkScale{#1}}
 \newcommand\draft[1]{\watermark{DRAFT #1}}
+\watermark{}
 
 %% section headings
 \RequirePackage{titlesec}
