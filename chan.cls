@@ -16,7 +16,7 @@
 % This work consists of the file chan.cls.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{chan}[2016/04/09 Chanathan's Paper]
+\ProvidesClass{chan}[2016/10/15 Chanathan's Paper]
 
 %% declare option(s)
 
@@ -52,7 +52,7 @@
 \DeclareOption{noheaderdate}{%
     \@shouldmakeheaderdatefalse%
 }
-\ExecuteOptions{a4paper, 11pt}
+\ExecuteOptions{letterpaper, 11pt} % because we're in 'Murica now
 \DeclareOption*{%
     \PassOptionsToClass{\CurrentOption}{article}%
 }
@@ -92,6 +92,9 @@
 \global\def\@instructor{Instructor's Name}
 \newcommand{\instructor}[1]{\global\def\@instructor{#1}}
 
+\global\def\@ta{TA's Name}
+\newcommand{\ta}[1]{\global\def\@ta{#1}}
+
 \newcommand{\partners}[1]{\@haspartnerstrue\global\def\@partners{#1}}
 
 %%%% shorttitle for headers
@@ -115,6 +118,7 @@
         \noindent Partner(s): \@partners\par% chktex 36
     \fi%
     \noindent\@instructor\par%
+    \noindent TA:~\@ta\par%
     \noindent\@course\par%
     \if@hasdate%
         \noindent\@date\par%
